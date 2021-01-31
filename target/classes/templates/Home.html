@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<form method="post" th:action="@{/save}" th:object="${urlObj}">
+    <label for="newName">Enter New Name Of The Address:</label><br>
+    <input type="text" th:field="*{newName}">
+    <br>
+    <label for="oldAddress">Enter Old Address:</label><br>
+    <input type="text" th:field="*{oldAddress}">
+    <br>
+    <button type="submit" value="Submit">Submit</button>
+
+</form>
+
+</body>
+</html>
